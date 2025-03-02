@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uses & Privacy of Cookies</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Understanding Cookies</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topic1.html">What Are Cookies?</a></li>
+                <li><a href="topic2.html">Uses & Privacy</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Uses of Cookies in Web Development</h2>
+            <ul>
+                <li>Session Management: Keep users logged in across sessions.</li>
+                <li>Personalization: Store user preferences and settings.</li>
+                <li>Tracking: Gather analytics and improve user experience.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Privacy Considerations</h2>
+            <p>While cookies enhance the web experience, they can also be used to track user behavior. It's important to understand privacy laws and implement cookie consent policies where necessary.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cookies Website</p>
+    </footer>
+</body>
+</html>
 
