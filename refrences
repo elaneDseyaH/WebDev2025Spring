@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>References & Resources</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Understanding Cookies</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topic1.html">What Are Cookies?</a></li>
+                <li><a href="topic2.html">Uses & Privacy</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>References & Learning Resources</h2>
+            <table>
+                <tr>
+                    <th>Resource</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">MDN Web Docs</a></td>
+                    <td>Comprehensive guide on HTTP cookies.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.cookiepro.com/knowledge/privacy-laws/" target="_blank">CookiePro</a></td>
+                    <td>Information about cookie consent and privacy laws.</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cookies Website</p>
+    </footer>
+</body>
+</html>
 
