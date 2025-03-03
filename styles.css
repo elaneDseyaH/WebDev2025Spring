@@ -1,83 +1,43 @@
-/* General Reset */
-* {
-    margin: 0;
+/* Apply styling to the main layout */
+.wrapper {
+    display: flex;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/* Sidebar / Table of Contents */
+.toc {
+    width: 250px; 
+    min-height: 100vh; 
+    background-color: #f4f4f4; 
+    padding: 15px;
+    position: fixed; 
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+/* TOC Links */
+.toc ul {
+    list-style: none;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-/* Body Styling */
-body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-}
-
-/* Navigation Bar */
-nav {
-    background: #333;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
+.toc a {
     text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
+    color: #333;
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
 }
 
-nav a:hover {
-    background: #555;
+.toc a:hover {
+    background-color: #ddd;
 }
 
 /* Main Content */
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
+.content {
+    margin-left: 270px; 
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
-
-/* Headings */
-h1, h2 {
-    color: #222;
-    text-align: center;
-}
-
-/* Lists */
-ul {
-    margin: 10px 0;
-    padding: 0 20px;
-}
-
-/* Table Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background: #333;
-    color: white;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    background: #333;
-    color: white;
-}
-
