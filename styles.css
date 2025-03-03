@@ -1,43 +1,74 @@
-/* Apply styling to the main layout */
-.wrapper {
-    display: flex;
-    max-width: 1200px; 
-    margin: 0 auto; 
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Sidebar / Table of Contents */
+/* Wrapper to contain both ToC and Content */
+.wrapper {
+    display: flex;
+    height: 100vh; 
+}
+
+/* Table of Contents Sidebar */
 .toc {
-    width: 250px; 
-    min-height: 100vh; 
-    background-color: #f4f4f4; 
-    padding: 15px;
-    position: fixed; 
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
     left: 0;
     top: 0;
     overflow-y: auto;
 }
 
-/* TOC Links */
-.toc ul {
-    list-style: none;
-    padding: 0;
+/* ToC Headings */
+.toc h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
 }
 
-.toc a {
+/* ToC Links */
+.toc ul {
+    list-style: none;
+}
+
+.toc ul li {
+    margin: 10px 0;
+}
+
+.toc ul li a {
+    color: white;
     text-decoration: none;
-    color: #333;
+    font-size: 1.2em;
     display: block;
     padding: 8px;
     border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.toc a:hover {
-    background-color: #ddd;
+.toc ul li a:hover {
+    background: #1abc9c;
 }
 
-/* Main Content */
+/* Main Content Area */
 .content {
     margin-left: 270px; 
     padding: 20px;
-    flex: 1;
+    width: calc(100% - 270px);
+}
+
+.content h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6;
 }
