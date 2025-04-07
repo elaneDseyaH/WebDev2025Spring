@@ -3,39 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uses & Privacy of Cookies</title>
+    <title>How Cookies Are Used</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="toc">
-            <h2>Table of Contents</h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="page1.html">What Are Cookies?</a></li>
-                <li><a href="page2.html">How Cookies Are Used</a></li>
-                <li><a href="references.html">References</a></li>
-            </ul>
-        </nav>
-    
-      <main class="content">
+<div class="wrapper">
+    <nav class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page1.html">What Are Cookies?</a></li>
+            <li><a href="page2.html">How Cookies Are Used</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="Quiz.html">Quizzes</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>How Cookies Are Used in Web Development</h1>
+
         <section>
-            <h1>Uses of Cookies in Web Development</h1>
+            <h2>Common Uses</h2>
             <ul>
-                <li>Session Management: Keep users logged in across sessions.</li>
-                <li>Personalization: Store user preferences and settings.</li>
-                <li>Tracking: Gather analytics and improve user experience.</li>
+                <li><strong>Session Management</strong>: Keep users logged in.</li>
+                <li><strong>Personalization</strong>: Save preferences like dark mode or language.</li>
+                <li><strong>Analytics</strong>: Track site usage to improve layout and content.</li>
             </ul>
         </section>
+
+        <section>
+            <h2>JavaScript and Cookies</h2>
+            <p>Cookies can be created, read, and deleted using <code>document.cookie</code> in JavaScript.</p>
+            <pre><code>document.cookie = "username=JohnDoe; expires=Thu, 18 Dec 2030 12:00:00 UTC; path=/";</code></pre>
+            <p>You can also read and update them directly, and remove them by setting an expiration in the past.</p>
+        </section>
+
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230713095952/Cookies3.png" alt="Cookie Lifecycle Diagram" width="80%">
 
         <section>
             <h2>Privacy Considerations</h2>
-            <p>While cookies enhance the web experience, they can also be used to track user behavior. It's important to understand privacy laws and implement cookie consent policies where necessary.</p>
+            <p>Cookies help websites run smoothly, but can also track behavior. Be mindful of privacy laws like GDPR and use cookie consent banners if collecting sensitive data.</p>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2025 Cookies Website</p>
-    </footer>
+</div>
 </body>
 </html>
 
