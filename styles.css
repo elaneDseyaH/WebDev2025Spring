@@ -1,74 +1,60 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cookies - Homepage</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Table of Contents Sidebar -->
+    <nav class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page1.html">What Are Cookies?</a></li>
+        <li><a href="page2.html">How Cookies Are Used</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="Quiz.html">Quizzes</a></li>
+      </ul>
+    </nav>
 
-/* Wrapper to contain both ToC and Content */
-.wrapper {
-    display: flex;
-    height: 100vh; 
-}
+    <!-- Main Content Area -->
+    <main class="content">
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>Welcome to WebDev Insights</h1>
+        <p>Explore the world of cookies, HTML, CSS & more!</p>
+        <a href="Quiz.html" class="cta-button">Take the Quiz</a>
+      </section>
 
-/* Table of Contents Sidebar */
-.toc {
-    width: 250px;
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    overflow-y: auto;
-}
+      <!-- Intro Section -->
+      <section class="intro">
+        <h2>What You'll Learn</h2>
+        <p>This site will guide you through the essentials of web development. Whether you're curious about cookies, looking to understand HTML structure, or want to make your site pop with CSS—it's all here.</p>
+      </section>
 
-/* ToC Headings */
-.toc h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    border-bottom: 2px solid white;
-    padding-bottom: 5px;
-}
-
-/* ToC Links */
-.toc ul {
-    list-style: none;
-}
-
-.toc ul li {
-    margin: 10px 0;
-}
-
-.toc ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    display: block;
-    padding: 8px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.toc ul li a:hover {
-    background: #1abc9c;
-}
-
-/* Main Content Area */
-.content {
-    margin-left: 270px; 
-    padding: 20px;
-    width: calc(100% - 270px);
-}
-
-.content h1 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-.content p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
+      <!-- Feature Cards -->
+      <section class="features">
+        <div class="card">
+          <h3>HTML Basics</h3>
+          <p>Learn how to build the structure of a webpage using HTML tags.</p>
+        </div>
+        <div class="card">
+          <h3>CSS Styling</h3>
+          <p>Discover how to style your content using fonts, colors, and layout techniques.</p>
+        </div>
+        <div class="card">
+          <h3>Cookies</h3>
+          <p>Understand how websites remember your visits using cookies.</p>
+        </div>
+        <div class="card">
+          <h3>Interactive Quizzes</h3>
+          <p>Test your knowledge and track what you've learned!</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
