@@ -3,41 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quiz – Cookies & Web Dev</title>
+  <title>References</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .quiz-section {
-      padding: 20px;
-    }
-
-    .quiz-section h2 {
-      margin-bottom: 10px;
-    }
-
-    .question {
-      margin-bottom: 25px;
-    }
-
-    button {
-      margin-right: 10px;
-      padding: 10px 16px;
-      font-weight: bold;
-      background-color: #007acc;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #005f9e;
-    }
-
-    .result {
-      margin-top: 20px;
-      font-weight: bold;
-    }
-  </style>
 </head>
 <body>
   <div class="wrapper">
@@ -53,67 +20,17 @@
       </ul>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Main Content Area -->
     <main class="content">
-      <h1>Quiz: Cookies & Web Development</h1>
-      <form id="quizForm" class="quiz-section">
-        <div class="question">
-          <h2>1. What does HTML stand for?</h2>
-          <label><input type="radio" name="q1" value="0"> Hyper Tool Markup Language</label><br>
-          <label><input type="radio" name="q1" value="1"> HyperText Markup Language</label><br>
-          <label><input type="radio" name="q1" value="0"> HomeText Markup Level</label>
-        </div>
-
-        <div class="question">
-          <h2>2. What tag is used to link a CSS file in HTML?</h2>
-          <input type="text" name="q2" placeholder="Type your answer here...">
-        </div>
-
-        <div class="question">
-          <h2>3. What is a cookie used for in web development?</h2>
-          <label><input type="radio" name="q3" value="1"> Storing user data between sessions</label><br>
-          <label><input type="radio" name="q3" value="0"> Improving graphics</label><br>
-          <label><input type="radio" name="q3" value="0"> Encrypting code</label>
-        </div>
-
-        <div class="question">
-          <h2>4. Which of the following are CSS properties? (Select all that apply)</h2>
-          <label><input type="checkbox" name="q4" value="1"> color</label><br>
-          <label><input type="checkbox" name="q4" value="1"> margin</label><br>
-          <label><input type="checkbox" name="q4" value="0"> script</label><br>
-          <label><input type="checkbox" name="q4" value="1"> padding</label>
-        </div>
-
-        <button type="button" onclick="checkAnswers()">Submit</button>
-        <button type="reset">Restart</button>
-        <div class="result" id="result"></div>
-      </form>
+      <h1>References</h1>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">MDN Web Docs – HTTP Cookies</a></li>
+        <li><a href="https://www.geeksforgeeks.org/http-cookies/" target="_blank">GeeksforGeeks – HTTP Cookies</a></li>
+        <li><a href="https://www.geeksforgeeks.org/how-cookies-are-used-in-a-website/" target="_blank">GeeksforGeeks – How Cookies Are Used</a></li>
+        <li><a href="https://devopedia.org/http-cookies" target="_blank">Devopedia – What Are Cookies</a></li>
+        <li><a href="https://www.geeksforgeeks.org/difference-between-session-and-cookies/" target="_blank">GeeksforGeeks – Sessions vs. Cookies</a></li>
+      </ul>
     </main>
   </div>
-
-  <script>
-    function checkAnswers() {
-      let score = 0;
-      const result = document.getElementById('result');
-      const q1 = document.querySelector('input[name="q1"]:checked');
-      const q2 = document.querySelector('input[name="q2"]').value.trim().toLowerCase();
-      const q3 = document.querySelector('input[name="q3"]:checked');
-      const q4 = document.querySelectorAll('input[name="q4"]:checked');
-
-      if (q1 && q1.value === "1") score++;
-      if (q2 === "link") score++;
-      if (q3 && q3.value === "1") score++;
-
-      let q4Score = 0;
-      q4.forEach(input => {
-        if (input.value === "1") q4Score++;
-        else q4Score--;
-      });
-      if (q4Score === 3) score++;
-
-      const pass = score >= 3 ? "PASS" : "FAIL";
-      result.innerHTML = `Your score: ${score}/4 – ${pass}`;
-    }
-  </script>
 </body>
 </html>
