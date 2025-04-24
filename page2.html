@@ -29,6 +29,47 @@
         <li><strong>Analytics:</strong> Track user behavior to improve performance.</li>
         <li><strong>Advertising:</strong> Track visits and serve relevant ads.</li>
       </ul>
+      <h2>Visual: Cookie Use Cases</h2>
+        <img src="https://cdn.pixabay.com/photo/2020/09/06/19/14/browser-5550176_1280.png" alt="Browser Cookie Use Case Diagram" style="margin-top: 10px;">
+        <p style="font-size: 0.9em;">Image Source: <a href="https://pixabay.com/vectors/browser-web-cookie-data-online-5550176/" target="_blank">Pixabay (Free to Use)</a></p>
+
+        <h2>Cookies vs. Sessions</h2>
+          <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <thead style="background-color: #f0f0f0;">
+              <tr>
+                <th style="border: 1px solid #ccc; padding: 10px;">Feature</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Cookies</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Sessions</th>
+              </tr>
+            </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 10px;">Storage Location</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">Client-side (browser)</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">Server-side</td>
+          </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 10px;">Persistence</td>
+              <td style="border: 1px solid #ccc; padding: 10px;">Can persist for days/months</td>
+              <td style="border: 1px solid #ccc; padding: 10px;">Ends when browser is closed or session expires</td>
+            </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 10px;">Security</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">Less secure (can be accessed via JS unless HttpOnly)</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">More secure (data on server)</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 10px;">Data Capacity</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">~4KB</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">Limited only by server storage</td>
+           </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 10px;">Use Cases</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">User preferences, analytics, ad tracking</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">Login/authentication, shopping cart</td>
+          </tr>
+        </tbody>
+      </table>
 
       <h2>Managing Cookies</h2>
       <p>Most browsers let you view, delete, or block cookies. You can:</p>
