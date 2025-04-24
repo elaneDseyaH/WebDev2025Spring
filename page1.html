@@ -1,32 +1,55 @@
-<main class="content">
-  <h1>What Are Cookies?</h1>
-  <p>In web development, a <strong>cookie</strong> is a small text file stored in a user's browser by a website. It allows websites to remember information about a user's visit, such as preferences, login status, or items in a shopping cart.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>What Are Cookies?</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Sidebar Navigation -->
+    <nav class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page1.html">What Are Cookies?</a></li>
+        <li><a href="page2.html">How Cookies Are Used</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="Quiz.html">Quizzes</a></li>
+      </ul>
+    </nav>
 
-  <h2>Why Cookies Exist</h2>
-  <p>HTTP—the protocol websites use—is stateless. This means the server doesn’t "remember" anything about a user's previous visits. Cookies solve this by storing data locally and allowing continuity between sessions.</p>
+    <!-- Main Content -->
+    <main class="content">
+      <h1>What Are Cookies?</h1>
+      <p>In web development, a <strong>cookie</strong> is a small text file stored in a user's browser by a website. It allows websites to remember information about a user's visit, such as preferences, login status, or items in a shopping cart.</p>
 
-  <h2>Key Properties of Cookies</h2>
-  <ul>
-    <li><strong>Name & Value:</strong> Every cookie stores data as a key-value pair.</li>
-    <li><strong>Expiration:</strong> Cookies can be set to expire after a time period.</li>
-    <li><strong>Domain & Path:</strong> These control where cookies are valid.</li>
-    <li><strong>Secure & HttpOnly:</strong> Flags that control access and security.</li>
-  </ul>
+      <h2>Why Cookies Exist</h2>
+      <p>HTTP—the protocol websites use—is stateless. Cookies solve this by storing data locally and allowing continuity between sessions.</p>
 
-  <h2>Types of Cookies</h2>
-  <ul>
-    <li><strong>Session Cookies:</strong> Temporary, deleted when the browser is closed.</li>
-    <li><strong>Persistent Cookies:</strong> Stay stored even after the browser is closed.</li>
-    <li><strong>First-party Cookies:</strong> Set by the site you’re visiting.</li>
-    <li><strong>Third-party Cookies:</strong> Set by domains other than the one you’re visiting (typically advertisers).</li>
-  </ul>
+      <h2>Key Properties</h2>
+      <ul>
+        <li><strong>Name & Value</strong>: Stored as key-value pairs.</li>
+        <li><strong>Expiration</strong>: Time-based control of lifespan.</li>
+        <li><strong>Domain & Path</strong>: Defines where cookies apply.</li>
+        <li><strong>Secure & HttpOnly</strong>: Controls access and security.</li>
+      </ul>
 
-  <h2>Visual Guide</h2>
-  <img src="https://devopedia.org/images/article/288/5564.1602410667.png" alt="How HTTP Cookies Work" style="max-width:100%; height:auto;">
-  <p style="font-size: 0.9em;">Source: <a href="https://devopedia.org/http-cookies" target="_blank">Devopedia</a></p>
+      <h2>Types of Cookies</h2>
+      <ul>
+        <li><strong>Session Cookies</strong>: Temporary, deleted after session.</li>
+        <li><strong>Persistent Cookies</strong>: Long-lived, for preferences.</li>
+        <li><strong>First-party Cookies</strong>: From the current site.</li>
+        <li><strong>Third-party Cookies</strong>: From outside domains (e.g., ads).</li>
+      </ul>
 
-  <h2>Real-World Example</h2>
-  <p>When you log into Gmail and stay logged in even after closing your browser, a persistent cookie remembers your session. If you use a shopping site like Amazon, your cart remains saved due to cookies.</p>
+      <img src="https://devopedia.org/images/article/288/5564.1602410667.png" alt="How HTTP Cookies Work" style="max-width:100%; height:auto;">
+      <p style="font-size: 0.9em;">Source: <a href="https://devopedia.org/http-cookies" target="_blank">Devopedia</a></p>
 
-  <p>More about cookies: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">MDN Web Docs</a></p>
-</main>
+      <h2>Example</h2>
+      <p>When you log into a website and remain logged in the next day, that’s often due to a persistent cookie storing your session token.</p>
+    </main>
+  </div>
+</body>
+</html>
