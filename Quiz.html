@@ -111,48 +111,59 @@
   </div>
 
   <script>
-    function checkAnswers() {
-      const answers = [
-        { id: "q1", correct: "1", explanation: "HyperText Markup Language" },
-        { id: "q2", correct: "link", explanation: "link" },
-        { id: "q3", correct: "1", explanation: "Storing user data between sessions" },
-        { id: "q4", correct: "1", explanation: "A cookie set by the site you are visiting" },
-        { id: "q5", correct: "1", explanation: "HttpOnly" },
-        { id: "q6", correct: "1", explanation: "CSS" },
-        { id: "q7", correct: "1", explanation: "HTTP" },
-        { id: "q8", correct: "1", explanation: "Cascading Style Sheets" },
-        { id: "q9", correct: "1", explanation: "<a>" },
-        { id: "q10", correct: "1", explanation: "They are deleted" }
-      ];
+  function checkAnswers() {
+    const answers = [
+      { id: "q1", correct: "1", explanation: "HyperText Markup Language", type: "radio" },
+      { id: "q2", correct: "link", explanation: "link", type: "text" },
+      { id: "q3", correct: "1", explanation: "Storing user data between sessions", type: "radio" },
+      { id: "q4", correct: "1", explanation: "A cookie set by the site you are visiting", type: "radio" },
+      { id: "q5", correct: "1", explanation: "HttpOnly", type: "radio" },
+      { id: "q6", correct: "1", explanation: "CSS", type: "radio" },
+      { id: "q7", correct: "1", explanation: "HTTP", type: "radio" },
+      { id: "q8", correct: "1", explanation: "Cascading Style Sheets", type: "radio" },
+      { id: "q9", correct: "1", explanation: "<a>", type: "radio" },
+      { id: "q10", correct: "1", explanation: "They are deleted", type: "radio" }
+    ];
 
-      let score = 0;
+    let score = 0;
 
-      answers.forEach((q, i) => {
-        const qName = `q${i + 1}`;
-        const input = document.querySelector(`input[name="${qName}"]:checked`);
-        const userAnswer = input ? input.value : document.querySelector(`input[name="${qName}"]`)?.value?.trim()?.toLowerCase();
+    answers.forEach((q, i) => {
+      const resultEl = document.getElementById(`a${i + 1}`);
+      let userAnswer = null;
 
-        const isCorrect = userAnswer === q.correct;
-        const resultEl = document.getElementById(`a${i + 1}`);
-        resultEl.innerHTML = isCorrect
-          ? `✔ Correct Answer: ${q.explanation}`
-          : `❌ Correct Answer: ${q.explanation}`;
-        resultEl.style.display = "block";
+      if (q.type === "radio") {
+        const selected = document.querySelector(`input[name="${q.id}"]:checked`);
+        userAnswer = selected ? selected.value : null;
+      } else if (q.type === "text") {
+        const input = document.querySelector(`input[name="${q.id}"]`);
+        userAnswer = input.value.trim().toLowerCase();
+      }
 
-        if (isCorrect) score++;
-      });
+      const isCorrect = userAnswer === q.correct;
 
-      const pass = score >= 7 ? "✅ PASS" : "❌ FAIL";
-      document.getElementById("result").innerText = `Your score: ${score}/10 – ${pass}`;
-    }
+      if (userAnswer === null || userAnswer === "") {
+        resultEl.innerHTML = `❌ Correct Answer: ${q.explanation}`;
+      } else if (isCorrect) {
+        score++;
+        resultEl.innerHTML = `✔ Correct Answer: ${q.explanation}`;
+      } else {
+        resultEl.innerHTML = `❌ Correct Answer: ${q.explanation}`;
+      }
 
-    function resetAnswers() {
-      document.querySelectorAll(".answer").forEach(ans => {
-        ans.innerHTML = "";
-        ans.style.display = "none";
-      });
-      document.getElementById("result").innerText = "";
-    }
-  </script>
+      resultEl.style.display = "block";
+    });
+
+    const pass = score >= 7 ? "✅ PASS" : "❌ FAIL";
+    document.getElementById("result").innerText = `Your score: ${score}/10 – ${pass}`;
+  }
+
+  function resetAnswers() {
+    document.querySelectorAll(".answer").forEach(ans => {
+      ans.innerHTML = "";
+      ans.style.display = "none";
+    });
+    document.getElementById("result").innerText = "";
+  }
+</script>
 </body>
 </html>
