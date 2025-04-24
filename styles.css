@@ -25,6 +25,10 @@
   top: 0;
   overflow-y: auto;
 }
+.toc ul li a.active {
+  background-color: #16a085;
+  font-weight: bold;
+}
 
 .toc h2 {
   font-size: 1.5em;
