@@ -136,3 +136,76 @@
   font-size: 1.4em;
   margin-bottom: 10px;
 }
+/* Tablets and large phones (768px and up) */
+@media screen and (max-width: 992px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .toc {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  nav.toc ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  nav.toc ul li {
+    margin: 5px;
+  }
+}
+
+/* Phones (480px and up) */
+@media screen and (max-width: 768px) {
+  .toc h2 {
+    font-size: 1.2em;
+  }
+
+  nav.toc ul li a {
+    font-size: 1em;
+    padding: 6px;
+  }
+
+  .content h1 {
+    font-size: 1.5em;
+  }
+
+  .card, .question {
+    font-size: 1em;
+  }
+}
+
+/* Small Phones (less than 480px) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .toc {
+    padding: 10px;
+  }
+
+  .quiz-section input,
+  .quiz-section button {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .result {
+    font-size: 1em;
+  }
+
+  .content img {
+    width: 100%;
+    height: auto;
+  }
+}
