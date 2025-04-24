@@ -3,45 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quiz – Cookies & Web Dev</title>
+  <title>Quiz – Cookies & Web Development</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .quiz-section {
-      padding: 20px;
-    }
-
-    .quiz-section h2 {
-      margin-bottom: 10px;
-    }
-
-    .question {
-      margin-bottom: 25px;
-    }
-
-    button {
-      margin-right: 10px;
-      padding: 10px 16px;
-      font-weight: bold;
-      background-color: #007acc;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #005f9e;
-    }
-
-    .result {
-      margin-top: 20px;
-      font-weight: bold;
-    }
-  </style>
 </head>
 <body>
   <div class="wrapper">
-    <!-- Sidebar Navigation -->
     <nav class="toc">
       <h2>Table of Contents</h2>
       <ul>
@@ -49,71 +15,144 @@
         <li><a href="page1.html">What Are Cookies?</a></li>
         <li><a href="page2.html">How Cookies Are Used</a></li>
         <li><a href="references.html">References</a></li>
-        <li><a href="Quiz.html">Quizzes</a></li>
+        <li><a href="quiz.html">Quizzes</a></li>
       </ul>
     </nav>
 
-    <!-- Main Content -->
-   <main class="content">
-  <h1>Quiz: Cookies & Web Development</h1>
-  <form id="quizForm" class="quiz-section">
-    <!-- Question 1 -->
-    <div class="question" id="q1Box">
-      <h2>1. What does HTML stand for?</h2>
-      <label><input type="radio" name="q1" value="0"> Hyper Tool Markup Language</label><br>
-      <label><input type="radio" name="q1" value="1"> HyperText Markup Language</label><br>
-      <label><input type="radio" name="q1" value="0"> HomeText Markup Level</label>
-      <p class="answer" id="a1" style="display:none; color: green;">✔ Correct Answer: HyperText Markup Language</p>
-    </div>
+    <main class="content">
+      <h1>Quiz: Cookies & Web Development</h1>
+      <form id="quizForm" class="quiz-section">
 
-    <!-- Question 2 -->
-    <div class="question" id="q2Box">
-      <h2>2. What tag is used to link a CSS file in HTML?</h2>
-      <input type="text" name="q2" placeholder="Enter your answer...">
-      <p class="answer" id="a2" style="display:none; color: green;">✔ Correct Answer: link</p>
-    </div>
+        <!-- Question Blocks -->
+        <div class="question" id="q1Box">
+          <h2>1. What does HTML stand for?</h2>
+          <label><input type="radio" name="q1" value="0"> Hyper Tool Markup Language</label><br>
+          <label><input type="radio" name="q1" value="1"> HyperText Markup Language</label><br>
+          <label><input type="radio" name="q1" value="0"> HomeText Markup Level</label>
+          <p class="answer" id="a1"></p>
+        </div>
 
-    <!-- Question 3 -->
-    <div class="question" id="q3Box">
-      <h2>3. What is a cookie used for in web development?</h2>
-      <label><input type="radio" name="q3" value="1"> Storing user data between sessions</label><br>
-      <label><input type="radio" name="q3" value="0"> Improving graphics</label><br>
-      <label><input type="radio" name="q3" value="0"> Encrypting code</label>
-      <p class="answer" id="a3" style="display:none; color: green;">✔ Correct Answer: Storing user data between sessions</p>
-    </div>
+        <div class="question" id="q2Box">
+          <h2>2. What tag is used to link a CSS file in HTML?</h2>
+          <input type="text" name="q2" placeholder="Enter your answer...">
+          <p class="answer" id="a2"></p>
+        </div>
 
-    <button type="button" onclick="checkAnswers()">Submit</button>
-    <button type="reset" onclick="resetAnswers()">Restart</button>
-    <div class="result" id="result" style="margin-top:20px; font-weight: bold;"></div>
-  </form>
-</main>
+        <div class="question" id="q3Box">
+          <h2>3. What is a cookie used for?</h2>
+          <label><input type="radio" name="q3" value="1"> Storing user data between sessions</label><br>
+          <label><input type="radio" name="q3" value="0"> Improving image quality</label><br>
+          <label><input type="radio" name="q3" value="0"> Encrypting HTML</label>
+          <p class="answer" id="a3"></p>
+        </div>
 
-<script>
-  function checkAnswers() {
-    let score = 0;
+        <div class="question" id="q4Box">
+          <h2>4. Which of the following is a first-party cookie?</h2>
+          <label><input type="radio" name="q4" value="1"> A cookie set by the site you are visiting</label><br>
+          <label><input type="radio" name="q4" value="0"> A cookie from an ad network</label><br>
+          <label><input type="radio" name="q4" value="0"> A browser extension log</label>
+          <p class="answer" id="a4"></p>
+        </div>
 
-    const q1 = document.querySelector('input[name="q1"]:checked');
-    const q2 = document.querySelector('input[name="q2"]').value.trim().toLowerCase();
-    const q3 = document.querySelector('input[name="q3"]:checked');
+        <div class="question" id="q5Box">
+          <h2>5. Which HTTP attribute can prevent JavaScript from accessing a cookie?</h2>
+          <label><input type="radio" name="q5" value="1"> HttpOnly</label><br>
+          <label><input type="radio" name="q5" value="0"> Secure</label><br>
+          <label><input type="radio" name="q5" value="0"> SameSite</label>
+          <p class="answer" id="a5"></p>
+        </div>
 
-    if (q1 && q1.value === "1") score++;
-    if (q2 === "link") score++;
-    if (q3 && q3.value === "1") score++;
+        <div class="question" id="q6Box">
+          <h2>6. What language is used to style a web page?</h2>
+          <label><input type="radio" name="q6" value="0"> HTML</label><br>
+          <label><input type="radio" name="q6" value="1"> CSS</label><br>
+          <label><input type="radio" name="q6" value="0"> Java</label>
+          <p class="answer" id="a6"></p>
+        </div>
 
-    document.getElementById('a1').style.display = "block";
-    document.getElementById('a2').style.display = "block";
-    document.getElementById('a3').style.display = "block";
+        <div class="question" id="q7Box">
+          <h2>7. What protocol do cookies typically operate under?</h2>
+          <label><input type="radio" name="q7" value="1"> HTTP</label><br>
+          <label><input type="radio" name="q7" value="0"> FTP</label><br>
+          <label><input type="radio" name="q7" value="0"> SMTP</label>
+          <p class="answer" id="a7"></p>
+        </div>
 
-    const pass = score >= 2 ? "✅ PASS" : "❌ FAIL";
-    document.getElementById('result').innerText = `Your score: ${score}/3 – ${pass}`;
+        <div class="question" id="q8Box">
+          <h2>8. What does CSS stand for?</h2>
+          <label><input type="radio" name="q8" value="0"> Computer Styled Sections</label><br>
+          <label><input type="radio" name="q8" value="1"> Cascading Style Sheets</label><br>
+          <label><input type="radio" name="q8" value="0"> Creative Style Setup</label>
+          <p class="answer" id="a8"></p>
+        </div>
+
+        <div class="question" id="q9Box">
+          <h2>9. Which HTML tag is used to create a hyperlink?</h2>
+          <label><input type="radio" name="q9" value="1"> &lt;a&gt;</label><br>
+          <label><input type="radio" name="q9" value="0"> &lt;link&gt;</label><br>
+          <label><input type="radio" name="q9" value="0"> &lt;href&gt;</label>
+          <p class="answer" id="a9"></p>
+        </div>
+
+        <div class="question" id="q10Box">
+          <h2>10. What happens to session cookies when you close the browser?</h2>
+          <label><input type="radio" name="q10" value="1"> They are deleted</label><br>
+          <label><input type="radio" name="q10" value="0"> They stay forever</label><br>
+          <label><input type="radio" name="q10" value="0"> They move to cache</label>
+          <p class="answer" id="a10"></p>
+        </div>
+
+        <!-- Buttons -->
+        <button type="button" onclick="checkAnswers()">Submit</button>
+        <button type="reset" onclick="resetAnswers()">Restart</button>
+        <div class="result" id="result"></div>
+      </form>
+    </main>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = [
+        { id: "q1", correct: "1", explanation: "HyperText Markup Language" },
+        { id: "q2", correct: "link", explanation: "link" },
+        { id: "q3", correct: "1", explanation: "Storing user data between sessions" },
+        { id: "q4", correct: "1", explanation: "A cookie set by the site you are visiting" },
+        { id: "q5", correct: "1", explanation: "HttpOnly" },
+        { id: "q6", correct: "1", explanation: "CSS" },
+        { id: "q7", correct: "1", explanation: "HTTP" },
+        { id: "q8", correct: "1", explanation: "Cascading Style Sheets" },
+        { id: "q9", correct: "1", explanation: "<a>" },
+        { id: "q10", correct: "1", explanation: "They are deleted" }
+      ];
+
+      let score = 0;
+
+      answers.forEach((q, i) => {
+        const qName = `q${i + 1}`;
+        const input = document.querySelector(`input[name="${qName}"]:checked`);
+        const userAnswer = input ? input.value : document.querySelector(`input[name="${qName}"]`)?.value?.trim()?.toLowerCase();
+
+        const isCorrect = userAnswer === q.correct;
+        const resultEl = document.getElementById(`a${i + 1}`);
+        resultEl.innerHTML = isCorrect
+          ? `✔ Correct Answer: ${q.explanation}`
+          : `❌ Correct Answer: ${q.explanation}`;
+        resultEl.style.display = "block";
+
+        if (isCorrect) score++;
+      });
+
+      const pass = score >= 7 ? "✅ PASS" : "❌ FAIL";
+      document.getElementById("result").innerText = `Your score: ${score}/10 – ${pass}`;
     }
 
-      function resetAnswers() {
-        document.getElementById('a1').style.display = "none";
-          document.getElementById('a2').style.display = "none";
-          document.getElementById('a3').style.display = "none";
-        document.getElementById('result').innerText = "";
-      }
-    </script>
-  </body>
+    function resetAnswers() {
+      document.querySelectorAll(".answer").forEach(ans => {
+        ans.innerHTML = "";
+        ans.style.display = "none";
+      });
+      document.getElementById("result").innerText = "";
+    }
+  </script>
+</body>
 </html>
